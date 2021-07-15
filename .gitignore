@@ -1,3 +1,11 @@
 .vscode
-PraticeSpace.code-workspace
+PracticeSpace.code-workspace
 build
+temp
+*.exe
+*.txt
+*.ans
+*.in
+*.out
+test.cpp
+brute.cpp
