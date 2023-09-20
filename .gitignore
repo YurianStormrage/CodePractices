@@ -1,11 +1,17 @@
+# ignore all files except
+# directories and .gitignore
+# (note that empty directory is ignored)
+*
+!*/
+!.gitignore
+
+# specify unignored files
+# which could be a single file
+# or all files under a directory
+!contest/**
+
+# list for files which
+# exist in subdirectories
+.DS_STORE
 .vscode
-PracticeSpace.code-workspace
 build
-temp
-*.exe
-*.txt
-*.ans
-*.in
-*.out
-test.cpp
-brute.cpp
