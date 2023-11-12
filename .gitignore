@@ -5,13 +5,10 @@
 !*/
 !.gitignore
 
-# specify unignored files
-# which could be a single file
-# or all files under a directory
-!contest/**
-
-# list for files which
-# exist in subdirectories
-.DS_STORE
-.vscode
-build
+# source code
+!*.c
+!*.cpp
+!*.py
+# descriptions & solutions
+!*.md
+!*.pdf
