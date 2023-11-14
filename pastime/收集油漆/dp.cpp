@@ -34,7 +34,7 @@ int main() {
     int min_trans = 1e9;
     for (int j{};j<=tot;++j)
         if(f[j][b_num]>=tot)
-            min_trans = min(min_trans, f[j][b_num] - j);
+            min_trans = min(min_trans, tot - j);
     cout << min_trans;
     return 0;
 }
