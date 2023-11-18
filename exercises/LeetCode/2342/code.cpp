@@ -1,8 +1,4 @@
-#include <algorithm>
 #include <bits/stdc++.h>
-#include <cstdio>
-#include <functional>
-#include <vector>
 using namespace std;
 
 class Solution {
