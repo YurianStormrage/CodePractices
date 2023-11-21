@@ -1,5 +1,12 @@
+---
+title: 689. 三个无重叠子数组的最大和
+difficulty: 困难
+date: 2023-11-19
+url: https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/
+tags:
+    - DP
+---
 # [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/)
-#困难
 
 ## 描述
 给你一个整数数组 `nums` 和一个整数 `k` ，找出三个长度为 `k` 、互不重叠、且全部数字和（`3 * k` 项）最大的子数组，并返回这三个子数组。
