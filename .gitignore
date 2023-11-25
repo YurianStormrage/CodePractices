@@ -12,3 +12,5 @@
 # descriptions & solutions
 !*.md
 !*.pdf
+# scripts
+!*.sh
