@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <ostream>
 using namespace std;
 
 class Solution {

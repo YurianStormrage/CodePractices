@@ -2,7 +2,7 @@
 title: 1410. HTML 实体解析器
 difficulty: 中等
 date: 2023-11-23
-url: https://leetcode.cn/problems/html-entity-parser/description/
+url: https://leetcode.cn/problems/html-entity-parser/
 tags:
     - Simulation
 ---
