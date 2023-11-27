@@ -1,37 +1,49 @@
 #!/bin/zsh
+[[ ! $# -lt 1 ]] || ! echo -e "\e[31merror: \e[mtitle not specified"
+
 source ~/.zshrc
 
-id=${1%\.*}
-title=$2
-res=${3:-res.md}
+# id=${1%\.*}
+# title=$2
+# res=${3:-res.md}
+title=$1
+res=${2:-res.md}
 
-echo -e "\e[32mCrawling:\e[m" $id. $title
+src=./crawler.py
+
+echo -e "\e[32mCrawling:\e[m" $title
 
 [[ ! -f $res ]] || ! echo -e "\e[31merror\e[0m: File $(pwd)/$res exists" || exit 1
+
+echo -ne "\e[33m"
+python3 $src $title $res | tee /tmp/leetcode_crawler_tmp.txt
+
+if [[ $? != 0 ]]; then
+    echo "\e[31merror\e[0m: failed at running crawler.py"
+    if [[ -f $res ]]; then
+        echo -e "\e[32mDeleted\e[0m $res"
+        rm $res
+    fi
+    exit 1
+fi
+echo -ne "\e[0m"
+
+out=$(cat /tmp/leetcode_crawler_tmp.txt)
+
+id=$(echo $out | sed -ne '/questionFrontendId: /{s/.*questionFrontendId: //; s/\([0-9]+\).*/\1/; p; q}')
 
 if [[ -d $id ]]; then
     echo -e "Directory \e[34m$(pwd)/$id/\e[0m exists"
     if [[ -f $id/readme.md ]]; then
         echo -e "\e[31merror\e[0m: File $(pwd)/$id/readme.md exists"
+        echo -e "\e[32mDelete file \e[34m$res\e[0m"
+        rm $res
         exit 1
     fi
 else
+    echo -e "\e[32mCreate directory \e[34m$id\e[0m"
     mkdir $id
-    echo -e "\e[32mCreated \e[34m$id/\e[0m"
 fi
-
-echo -ne "\e[33m"
-python3 crawler.py $title $res
-
-if [[ $? != 0 ]]; then
-    echo "\e[31merror\e[0m: failed at running crawler.py"
-    if [[ -f $res ]]; then
-        rm $res
-        echo -e "\e[32mDeleted\e[0m $res"
-    fi
-    exit 1
-fi
-echo -ne "\e[0m"
 
 rc=0
 sed -i "1i\---\ntitle: $title" $res
