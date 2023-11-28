@@ -60,6 +60,8 @@ sed -i "/^ $/d" $res
 rc=$(($rc | $?))
 sed -i '$a\\n## [思考](./code.cpp)' $res
 rc=$(($rc | $?))
+sed -i 's/\*\*提示：/## 限制/' $res
+rc=$(($rc | $?))
 
 if [[ $rc != 0 ]]; then
     echo -e "\e[31merror\e[0m: failed at running command sed"
