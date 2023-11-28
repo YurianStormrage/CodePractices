@@ -32,11 +32,6 @@ int main() {
         void run() {
             auto ans = sumSubarrayMins(arr);
             cout << ans << endl;
-            // for_each(ans.begin(), ans.end(),
-            //          [](decltype(ans)::value_type const& x) {
-            //             cout << x << ' ';
-            //          });
-            // cout << endl;
         }
     };
 

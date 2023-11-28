@@ -47,7 +47,7 @@ tags:
 
 ## 限制
 
-- ``1 <= s.length <= 10<sup>5</sup>``
+- 1 <= s.length <= 10<sup>5</sup>
 - ``s`` 只包含大写英文字符
 
 
