@@ -54,8 +54,14 @@ bitset
 
 `bitset`的`_Find_first()`方法是分块枚举，每次枚举`sizeof(_WordT)`个字节，其中`_WordT`为`unsigned long`。
 
+时间复杂度$O(\frac{N}{64})$
+空间复杂度$O(\frac{N}{32})$
+
 ## [题解](./solution.cpp)
 set
 
 维护假pop的次数`t`，当真正需要插入时（`num < t`时），将`num`插入`set`。
 pop时先判断set是否为空。set为空说明没有比`t`小的数存在，`++t`并返回其值；否则返回set中的最小值并删除它。
+
+时间复杂度$O(logN)$
+空间复杂度$O(N)$
