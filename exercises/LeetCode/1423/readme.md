@@ -4,7 +4,7 @@ difficulty: Medium
 date: 2023-12-03 17:24:37
 url: https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/
 tags:
-    - 
+    - 前缀和
 ---
 # [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/)
 ## 描述
