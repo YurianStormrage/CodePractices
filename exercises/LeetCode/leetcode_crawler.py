@@ -48,11 +48,17 @@ def replace_content_with_md(content):
             tmp = re.sub(r'<sup>(.*?)</sup>', r'^{\1}', tmp)
             flag = True
         if flag:
+            if r'<=' in tmp:
+                tmp = re.sub(r'<=', r'\\le', tmp)
             tmp = re.sub(r'<code>(.*?)</code>', r'$\1$', tmp)
         else:
             tmp = re.sub(r'<code>(.*?)</code>', r'`\1`', tmp)
         return tmp
     replaces = [
+        ['&nbsp;', ' '],
+        ['&quot;', '"'],
+        ['&lt;', '<'],
+        ['&gt;', '>'],
         [r'<pre>.*?</pre>', remove_label_in_pre], # 替换pre内部的标签
         [r'<strong>(.*?)</strong>', r'**\1**'],
         [r'<code>.*?</code>', replace_with_math_or_code],
@@ -62,16 +68,14 @@ def replace_content_with_md(content):
         [r'<br/>', r'\n'],
         [r'<a href="(.*?)">(.*?)</a>', r'[\2](\1)'],
         [r'<strong class="example">(.*?)</strong>', r'### \1'],
-        ['&nbsp;', ' '],
-        ['&quot;', '"'],
-        ['&lt;', '<'],
-        ['&gt;', '>'],
         [r'<ul>(.*?)</ul>', r'\1'],
         [r'[\t]<li>(.*?)</li>', r'- \1'],
         [r'\*\*(示例 \d+)：?\*\*', r'### \1'],
         [r'### 示例 1', r'## 样例\n### 示例 1'],
         [r'\*\*提示：\*\*', r'## 限制\n'],
-        [r'([\t ]*\n){3,}', r'\n'],
+        [r'([\t ]*\n){3,}', r'\n\n'],
+        [r'(<img.*?>)\s?```', r'\1\n\n```'],
+        [r'[^\s]```', r'\n```'],
     ]
     for pattern, repl in replaces:
         content = re.sub(pattern, repl, content, flags=re.S)
