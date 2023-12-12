@@ -59,11 +59,12 @@ def replace_content_with_md(content):
         ['&quot;', '"'],
         ['&lt;', '<'],
         ['&gt;', '>'],
+        ['\xa0', ' '],
         [r'<pre>.*?</pre>', remove_label_in_pre], # 替换pre内部的标签
         [r'<strong>(.*?)</strong>', r'**\1**'],
         [r'<code>.*?</code>', replace_with_math_or_code],
         [r'<em>(.*?)</em>', r'*\1*'],
-        [r'<pre>(.*?)</pre>', r'```\n\1```'],
+        [r'<pre>\n*(.*?)\n*</pre>', r'```\n\1\n```'],
         [r'<p>(.*?)</p>', r'\1'],
         [r'<br/>', r'\n'],
         [r'<a href="(.*?)">(.*?)</a>', r'[\2](\1)'],
@@ -73,9 +74,10 @@ def replace_content_with_md(content):
         [r'\*\*(示例 \d+)：?\*\*', r'### \1'],
         [r'### 示例 1', r'## 样例\n### 示例 1'],
         [r'\*\*提示：\*\*', r'## 限制\n'],
-        [r'([\t ]*\n){3,}', r'\n\n'],
+        [r'([ \t]*\n){3,}', r'\n\n'],
         [r'(<img.*?>)\s?```', r'\1\n\n```'],
-        [r'[^\s]```', r'\n```'],
+        [r'\s```', r'\n```'],
+        [r'\*\*(\s*)(.*?)(\s*)\*\*', r'\1**\2**\3'],
     ]
     for pattern, repl in replaces:
         content = re.sub(pattern, repl, content, flags=re.S)
