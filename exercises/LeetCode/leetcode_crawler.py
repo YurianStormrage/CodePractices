@@ -6,14 +6,14 @@ import json
 import requests
 
 def get_question_content(question_id):
-    url = 'https://leetcode-cn.com/graphql'
+    url = 'https://leetcode.cn/graphql'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
             AppleWebKit/537.36 (KHTML, like Gecko) \
             Chrome/81.0.4044.122 Safari/537.36',
         'Connection': 'keep-alive',
         'Content-Type': 'application/json',
-        'Referer': 'https://leetcode-cn.com/problems/' + question_id
+        'Referer': 'https://leetcode.cn/problems/' + question_id
     }
     data = {
         'operationName': 'getQuestionDetail',
@@ -107,7 +107,7 @@ with open(out, 'w', encoding='utf-8') as f:
         'title: ' + title + '\n' +
         'difficulty: ' + difficulty + '\n' +
         'date: ' + os.popen('date \'+%Y-%m-%d %H:%M:%S\'').read() +
-        'url: https://leetcode-cn.com/problems/' + slug + '\n' +
+        'url: https://leetcode.cn/problems/' + slug + '\n' +
         'tags:\n' +
         '    - \n' +
         '---\n' +
