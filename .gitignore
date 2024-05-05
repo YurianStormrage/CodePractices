@@ -12,5 +12,7 @@
 # descriptions & solutions
 !*.md
 !*.pdf
+!*.jpg
+!*.png
 # scripts
 !*.sh
