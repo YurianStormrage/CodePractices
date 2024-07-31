@@ -22,9 +22,15 @@
 - [857. 雇佣 K 名工人的最低成本](857/readme.md)
 - [1235. 规划兼职工作](1235/readme.md)
 - [741. 摘樱桃](741/readme.md)
+- [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
 
 ## Calendar
 
+- 2024/07/31
+  - [3111. 覆盖所有点的最少矩形数目](3111/readme.md) [[TODO]]
+- 2024/06/09
+  - [312. 戳气球](312/readme.md)
+    - dp
 - 2024/05/06
   - [741. 摘樱桃](741/readme.md)
 - 2024/05/04
