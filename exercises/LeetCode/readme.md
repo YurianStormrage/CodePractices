@@ -23,9 +23,13 @@
 - [1235. 规划兼职工作](1235/readme.md)
 - [741. 摘樱桃](741/readme.md)
 - [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
+- [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i/)
 
 ## Calendar
 
+- 2024/08/06
+  - [3129. 找出所有稳定的二进制数组 I](3129/readme.md) [[TODO]]
+    - dp
 - 2024/08/01
   - [LCP 40. 心算挑战](<LCP 40/readme.md>)
     - (通过`[<链接>]`引用带空格的url；或用`%20`转义空格)
