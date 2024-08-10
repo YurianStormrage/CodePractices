@@ -24,9 +24,13 @@
 - [741. 摘樱桃](741/readme.md)
 - [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
 - [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i/)
+- [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/)
 
 ## Calendar
 
+- 2024/08/10
+  - [2940. 找到 Alice 和 Bob 可以相遇的建筑](2940/readme.md) [[TODO]]
+    - 线段树/单调栈
 - 2024/08/06
   - [3129. 找出所有稳定的二进制数组 I](3129/readme.md) [[TODO]]
     - dp
