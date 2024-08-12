@@ -26,9 +26,13 @@
 - [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i/)
 - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/)
 - [1035. 不相交的线](1035/readme.md)
+- [676. 实现一个魔法字典](676/readme.md)
 
 ## Calendar
 
+- 2024/08/12
+  - [676. 实现一个魔法字典](676/readme.md) [[REDO]]
+    - 字典树
 - 2024/08/11
   - [1035. 不相交的线](1035/readme.md) [[TODO]]
     - dp
