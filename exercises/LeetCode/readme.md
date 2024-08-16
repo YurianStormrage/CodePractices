@@ -27,9 +27,22 @@
 - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/)
 - [1035. 不相交的线](1035/readme.md)
 - [676. 实现一个魔法字典](676/readme.md)
+- [3152. 特殊数组 II](3152/readme.md)
+- [3148. 矩阵中的最大得分](3148/readme.md)
+- [3117. 划分数组得到最小的值之和](3117/readme.md)
 
 ## Calendar
 
+- 2024/08/16
+  - [3117. 划分数组得到最小的值之和](3117/readme.md) [[REDO]]
+    - dfs + 记忆化 (由于无法写出转移方程
+- 2024/08/15
+  - [3148. 矩阵中的最大得分](3148/readme.md) [[REDO]]
+    - dp
+    - 二维前缀和
+- 2024/08/14
+  - [3152. 特殊数组 II](3152/readme.md) [[REDO]]
+    - dp
 - 2024/08/12
   - [676. 实现一个魔法字典](676/readme.md) [[REDO]]
     - 字典树
