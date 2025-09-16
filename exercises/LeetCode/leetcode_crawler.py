@@ -60,6 +60,8 @@ def replace_content_with_md(content):
         ['&lt;', '<'],
         ['&gt;', '>'],
         ['\xa0', ' '],
+        ['<ol>', ''], # 去除列表标签
+        ['</ol>', ''],
         [r'<pre>.*?</pre>', remove_label_in_pre], # 替换pre内部的标签
         [r'<strong>(.*?)</strong>', r'**\1**'],
         [r'<code>.*?</code>', replace_with_math_or_code],
@@ -95,7 +97,8 @@ title = content['translatedTitle']
 difficulty = content['difficulty']
 content_md = replace_content_with_md(content['translatedContent'])
 
-out = os.path.join(os.path.dirname(__file__), id, 'readme.md')
+# out = os.path.join(os.path.dirname(__file__), id, 'readme.md')
+out = os.path.join(os.path.dirname(__file__), id + '. ' + slug, 'readme.md')
 
 out_dir = os.path.dirname(out)
 if not os.path.exists(out_dir):
