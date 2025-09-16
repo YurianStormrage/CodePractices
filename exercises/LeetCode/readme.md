@@ -9,6 +9,7 @@
 - [1696]
 - [2312]
 - [310]
+- [1766. 互质树](1766/readme.md)
 - [2952](2952/readme.md)
 - [LCP 24. 数字游戏](https://leetcode.cn/problems/5TxKeK/)
 - [LCP 30. 魔塔游戏](https://leetcode.cn/problems/p0NxJO/)
@@ -35,6 +36,10 @@
 
 ## Calendar
 
+- 2025/09/16
+  - [2197. 替换数组中的非互质数](2197/readme.md)
+- 2025/08/19
+  - [2348. 全 0 子数组的数目](2348/readme.md)
 - 2024/09/28
   - [2286. 以组为单位订音乐会的门票](2286/readme.md) [[REDO]]
     - 线段树
